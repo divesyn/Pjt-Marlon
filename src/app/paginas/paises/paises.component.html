@@ -6,7 +6,7 @@
     <div class="paises" id="paises">
         <div *ngFor="let pais of listaPaises">
             <a routerLink="/pais/{{pais.ccn3}}">
-                <div class="caixa-pais">
+                <div class="caixa-pais" appDestaque>
                     <img [src]="pais?.flags.png" alt="Flag">
                     <h2>{{ pais?.name.common | uppercase }}</h2>
                     <h3>CAPITAL: {{ pais?.capital | naoDisponivel }}</h3>

@@ -2,7 +2,7 @@
     <button routerLink="/paises" class="link">Voltar</button>
 </div>
 <section *ngIf="infoPais">
-    <div class="caixa-pais2" routerLink="/home">
+    <div class="caixa-pais2" routerLink="/paises" appOpacity>
         <img src="{{infoPais[0].flags.png}}">
         <h4>{{infoPais[0].name.common}}</h4>
         <p></p>
