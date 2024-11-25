@@ -1,0 +1,23 @@
+<div class="nav">
+    <button routerLink="/home">Inicio</button>
+</div>
+
+<section *ngIf="listaPaises">
+    <div class="paises" id="paises">
+        <div *ngFor="let pais of listaPaises">
+            <a routerLink="/pais/{{pais.ccn3}}">
+                <div class="caixa-pais">
+                    <img [src]="pais?.flags.png" alt="Flag">
+                    <h2>{{ pais?.name.common | uppercase }}</h2>
+                    <h3>CAPITAL: {{ pais?.capital | naoDisponivel }}</h3>
+                    <h3>REGIÃO: {{ pais?.region }}</h3>
+                    <br>
+                    <p><b>Clique para mais informações</b></p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+<section *ngIf="!listaPaises">
+    <h5>Carregando...</h5>
+</section>

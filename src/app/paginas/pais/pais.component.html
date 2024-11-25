@@ -1,0 +1,24 @@
+<div class="nav">
+    <button routerLink="/paises" class="link">Voltar</button>
+</div>
+<section *ngIf="infoPais">
+    <div class="caixa-pais2" routerLink="/home">
+        <img src="{{infoPais[0].flags.png}}">
+        <h4>{{infoPais[0].name.common}}</h4>
+        <p></p>
+        <h3>Capital: {{infoPais[0].capital}}</h3>
+        <h3>Região: {{infoPais[0].region}}</h3>
+        <h3>Sub-região: {{infoPais[0].subregion | naoDisponivel}}</h3>
+        <h3>População: {{infoPais[0].population | naoDisponivel}}</h3>
+        <h3>Área: {{infoPais[0].area}} km²</h3>
+        <h3>Idiomas falados: {{infoPais[0].languages | objectValues | join: ', '}}</h3>
+        <h3>Fuso horário: {{infoPais[0].timezones | join: ', '}}</h3>
+        <h3>Domínio de internet: {{infoPais[0].tld | join: ', '}}</h3>
+        <h3>Código de discagem: {{infoPais[0].idd.root}}</h3>
+        <p><br><b>Clique aqui para voltar</b></p>
+    </div>
+</section>
+
+<section *ngIf="!infoPais">
+    <h5>País não encontrado. Tente novamente.</h5>
+</section>

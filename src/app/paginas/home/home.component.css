@@ -1,0 +1,19 @@
+.caixa {
+    max-width: 800px;
+    margin: 20px auto;
+    background: white;
+    border: 1px solid rgb(210, 211, 212);
+    border-radius: 10px;
+    padding: 30px;
+    font-size: 12pt;
+}
+
+p {
+    text-align: left;
+    font-size: 11pt;
+}
+
+img {
+    width: 250px;
+    padding: 0px 30px 30px 0px;
+}

@@ -1,1 +1,170 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt;
+    text-align: center;
+    background-color: white;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* configuração de headlines */
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 30pt;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 10px;
+}
+
+h2 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12pt;
+    margin: 0 auto;
+    padding: 5px;
+    text-align: center;
+}
+
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    text-align: left;
+    border-bottom: 1px solid rgb(226, 226, 226);
+    margin: 0 auto;
+    padding: 8px;
+}
+
+h4 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20pt;
+    text-align: center;
+    margin: 0 auto;
+}
+
+h5 {
+    font-size: 20pt;
+    margin-top: 300px;
+}
+
+/* configuração da navegação */
+.nav {
+    position: sticky;
+    top: 66px;
+    left: 0px;
+    right: 0px;
+    height: 33px;
+    background: white;
+    border-bottom: 1px solid rgb(210, 211, 212);
+    transition: 0.3s;
+}
+
+.nav button {
+    width: 160px;
+    height: 32px;
+    font-weight: bold;
+    font-size: 9pt;
+    border: 0px;
+    background: white;
+}
+
+.nav button:hover {
+    cursor:pointer;
+    background: black;
+    color: white;
+}
+
+.nav input {
+    background: url("https://icon-library.com/images/search-icon-html/search-icon-html-2.jpg") no-repeat;
+    background-size: 15px 15px;
+    background-position: 7px center;
+    width: 160px;
+    height: 30px;
+    border: 0px;
+    padding: 0px 10px 0px 30px;
+    text-align: left;
+}
+
+/* configuração dos menus dropdown */
+/* PRIMEIRO DROP */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content button {
+    font-size: 8pt;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    width: 160px;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* SEGUNDO DROP */
+.dropdown-content .sub-dropdown {
+    display: none;
+    position: absolute;
+    left: 160px;
+    top: 0;
+}
+
+.dropdown:hover .sub-dropdown {
+    display: none;
+}
+
+.dropdown button:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content .dropdown:hover .sub-dropdown {
+    display: block;
+    left: 160px;
+}
+
+/* TERCEIRO DROP */
+.third-dropdown {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    display: none;
+}
+
+/* exibe o terceiro  dropdown somente quando o mouse está sobre o segundo nível */
+.sub-dropdown .dropdown:hover > .third-dropdown {
+    display: block;
+}
+
+/* oculta o terceiro nível quando não está em hover */
+.sub-dropdown .dropdown > .third-dropdown {
+    display: none;
+}
+
+/* coloca uma seta para o lado caso exista mais opções no dropdown */
+.dropdown-content .dropdown > button::after {
+    content: '▶';
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 8pt;
+    opacity: 15%;
+}

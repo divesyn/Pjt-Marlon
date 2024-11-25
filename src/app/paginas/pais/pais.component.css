@@ -1,0 +1,15 @@
+.caixa-pais2 {
+    background: white;
+    border: 1px solid rgb(210, 211, 212);
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 400px;
+    height: flex;
+    cursor: pointer;
+    padding: 20px;
+}
+
+img {
+ width: 100%;
+ height: auto;
+}
