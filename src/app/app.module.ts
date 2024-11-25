@@ -11,6 +11,8 @@ import { NaoDisponivelPipe } from './pipes/nao-disponivel.pipe';
 import { ObjectValuesPipe } from './pipes/object-values.pipe';
 import { JoinPipe } from './pipes/join.pipe';
 import { PaisesComponent } from './paginas/paises/paises.component';
+import { DestaqueDirective } from './directives/destaque.directive';
+import { OpacityDirective } from './directives/opacity.directive';
 
 @NgModule({
   declarations: [
@@ -23,6 +25,8 @@ import { PaisesComponent } from './paginas/paises/paises.component';
     ObjectValuesPipe,
     JoinPipe,
     PaisesComponent,
+    DestaqueDirective,
+    OpacityDirective,
   ],
   imports: [
     BrowserModule,
