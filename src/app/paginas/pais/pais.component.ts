@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ApiServiceService } from '../../services/api-service.service';
+import { PaisporIdService } from '../../services/paispor-id.service';
 
 @Component({
   selector: 'app-pais',
@@ -12,7 +12,7 @@ export class PaisComponent implements OnInit {
   public idPais: any;
   infoPais : any = null;
 
-  constructor(private route: ActivatedRoute, private pais: ApiServiceService){}
+  constructor(private route: ActivatedRoute, private pais: PaisporIdService){}
 
   ngOnInit() {
     this.idPais = this.route.snapshot.paramMap.get('id');
@@ -22,7 +22,4 @@ export class PaisComponent implements OnInit {
       this.infoPais = data;
     })
   }
-
-
-
 }
